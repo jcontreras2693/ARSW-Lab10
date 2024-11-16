@@ -52,15 +52,19 @@ C:\Users\judac\AppData\Roaming\npm\newman run "ARSW_LOAD-BALANCING_AZURE.postman
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
     * Implementación de la memorización.
+    
     ![](images/memoization.png)
 
     * Prueba con el número 30.00 por primera vez.
+   
     ![](images/memoization_response1.png)
 
     * Prueba con el número 30.00 después de varios intentos.
+
     ![](images/memoization_response2.png)
 
     * Prueba con el número 30.000 después de 5 mins.
+
     ![](images/memoization_response3.png)
 
     * La función tarda más en cargar los resultados en comparación a los tiempos de respuesta anteriores a la espera de los 5 minutos
