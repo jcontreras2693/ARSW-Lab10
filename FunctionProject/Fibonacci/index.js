@@ -5,7 +5,6 @@ module.exports = async function (context, req) {
 
     let nth = req.body.nth;
 
-    // Validar que el valor de 'nth' sea un número positivo
     if (nth < 0) {
         context.res = {
             status: 400,
@@ -14,12 +13,9 @@ module.exports = async function (context, req) {
         return;
     }
 
-    // Crear un objeto para almacenar los resultados ya calculados (memoization)
     let memo = {};
 
-    // Función recursiva con memoization
     function fibonacci(n) {
-        // Si el valor ya está calculado, lo devolvemos directamente
         if (n in memo) {
             return memo[n];
         }
@@ -32,17 +28,14 @@ module.exports = async function (context, req) {
             return bigInt.one;
         }
 
-        // Calcular Fibonacci(n) de manera recursiva, y guardar el resultado en memo
         let result = fibonacci(n - 1).add(fibonacci(n - 2));
-        memo[n] = result; // Guardamos el resultado para futuras llamadas
+        memo[n] = result;
 
         return result;
     }
 
-    // Llamamos a la función fibonacci con el valor de nth
     let result = fibonacci(nth);
 
-    // Devolver el resultado como una cadena
     context.res = {
         body: result.toString()
     };
