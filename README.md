@@ -42,10 +42,11 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
+    * Comando usado para generar las pruebas y el reporte usando newman.
+
 ```console
 C:\Users\judac\AppData\Roaming\npm\newman run "ARSW_LOAD-BALANCING_AZURE.postman_collection.json" -n 10 --reporters cli,html --reporter-html-export report5.html
 ```
-
 
 ![](images/first_report.png)
 
